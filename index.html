@@ -31,25 +31,29 @@
             font-weight: bold;
             text-transform: uppercase;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #3498db;
+            padding: 10px;
+            border-radius: 10px;
+        }
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
-            background: #3498db;
-            border-radius: 0 0 10px 10px;
-            flex-wrap: wrap;
+            gap: 15px;
         }
         nav ul li {
-            margin: 10px;
+            margin: 0;
         }
         nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
             padding: 12px 20px;
-            display: inline-block;
+            display: block;
             transition: all 0.3s ease-in-out;
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.2);
@@ -61,8 +65,15 @@
         main {
             padding: 20px;
         }
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
         section {
-            margin-bottom: 30px;
+            flex: 1;
+            min-width: 300px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 10px;
@@ -72,11 +83,9 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
         }
         .gallery-container img {
-            width: 100%;
-            max-width: 300px;
+            width: 48%;
             height: auto;
             object-fit: cover;
             border-radius: 10px;
@@ -89,6 +98,9 @@
         .contact-info {
             text-align: center;
             font-size: 18px;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
         }
         footer {
             background: #2c3e50;
@@ -99,16 +111,21 @@
             border-radius: 0 0 10px 10px;
         }
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
             nav ul {
                 flex-direction: column;
-                text-align: center;
-            }
-            nav ul li {
-                margin: 5px 0;
+                align-items: center;
+                width: 100%;
             }
             .gallery-container {
                 flex-direction: column;
                 align-items: center;
+            }
+            .gallery-container img {
+                width: 90%;
             }
         }
     </style>
@@ -126,21 +143,25 @@
     </nav>
     <div class="container">
         <main>
-            <section id="about">
-                <h2>Tentang Saya</h2>
-                <p>Halo! Nama saya <strong>Muhammad Adzkia Madani</strong>, seorang mahasiswa <em>Pendidikan Teknik Informatika</em> yang tertarik pada pengembangan web.</p>
-            </section>
-            <section id="gallery">
-                <h2>Galeri</h2>
-                <div class="gallery-container">
-                    <img src="foto.png" alt="Foto 1">
-                    <img src="foto.jpg" alt="Foto 2">
-                </div>
-            </section>
-            <section id="contact">
-                <h2>Kontak</h2>
-                <p class="contact-info">Email: <a href="mailto:adzkiamadanipku@gmail.com">adzkiamadanipku@gmail.com</a></p>
-            </section>
+            <div class="content-container">
+                <section id="about">
+                    <h2>Tentang Saya</h2>
+                    <p>Halo! Nama saya <strong>Muhammad Adzkia Madani</strong>, seorang mahasiswa <em>Pendidikan Teknik Informatika</em> yang tertarik pada pengembangan web.</p>
+                </section>
+                <section id="gallery">
+                    <h2>Galeri</h2>
+                    <div class="gallery-container">
+                        <img src="foto.png" alt="Foto 1">
+                        <img src="foto.jpg" alt="Foto 2">
+                    </div>
+                </section>
+                <section id="contact">
+                    <h2>Kontak</h2>
+                    <div class="contact-info">
+                        <p>Email: <a href="mailto:adzkiamadanipku@gmail.com">adzkiamadanipku@gmail.com</a></p>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
     <footer>
