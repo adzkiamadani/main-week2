@@ -6,10 +6,10 @@
     <title>Profil Saya</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ecf0f1;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             color: #333;
         }
         .container {
@@ -18,7 +18,7 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         header {
             background: #2c3e50;
@@ -26,8 +26,9 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px 10px 0 0;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
+            text-transform: uppercase;
         }
         nav ul {
             list-style: none;
@@ -35,24 +36,26 @@
             text-align: center;
             background: #3498db;
             margin: 0;
-            overflow: hidden;
             border-radius: 0 0 10px 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
         }
         nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 12px 20px;
             display: inline-block;
-            transition: background 0.3s, color 0.3s;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
         }
         nav ul li a:hover {
             background: #2980b9;
-            border-radius: 5px;
+            transform: scale(1.1);
         }
         main {
             padding: 20px;
@@ -60,17 +63,21 @@
         section {
             margin-bottom: 30px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        img:hover {
-            transform: scale(1.05);
+        .gallery-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.1);
         }
         .contact-info {
             text-align: center;
@@ -105,8 +112,10 @@
             </section>
             <section id="gallery">
                 <h2>Galeri</h2>
-                <img src="foto.png" alt="Foto 1">
-                <img src="foto.jpg" alt="Foto 2">
+                <div class="gallery-container">
+                    <img src="foto.png" alt="Foto 1">
+                    <img src="foto.jpg" alt="Foto 2">
+                </div>
             </section>
             <section id="contact">
                 <h2>Kontak</h2>
