@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ecf0f1;
             color: #333;
         }
         .container {
@@ -18,7 +18,7 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header {
             background: #2c3e50;
@@ -26,6 +26,8 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px 10px 0 0;
+            font-size: 24px;
+            font-weight: bold;
         }
         nav ul {
             list-style: none;
@@ -33,6 +35,8 @@
             text-align: center;
             background: #3498db;
             margin: 0;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
         }
         nav ul li {
             display: inline;
@@ -42,12 +46,19 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background: #2980b9;
+            border-radius: 5px;
         }
         main {
             padding: 20px;
         }
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         img {
             max-width: 100%;
@@ -55,19 +66,29 @@
             display: block;
             margin: 10px auto;
             border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
         }
         footer {
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            font-size: 14px;
             border-radius: 0 0 10px 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Halaman Saya</h1>
+        Selamat Datang di Halaman Saya
     </header>
     <nav>
         <ul>
@@ -80,7 +101,7 @@
         <main>
             <section id="about">
                 <h2>Tentang Saya</h2>
-                <p>Halo! Nama saya Muhammad Adzkia Madani, seorang mahasiswa Pendidikan Teknik Informatika yang tertarik pada pengembangan web.</p>
+                <p>Halo! Nama saya <strong>Muhammad Adzkia Madani</strong>, seorang mahasiswa <em>Pendidikan Teknik Informatika</em> yang tertarik pada pengembangan web.</p>
             </section>
             <section id="gallery">
                 <h2>Galeri</h2>
@@ -89,12 +110,12 @@
             </section>
             <section id="contact">
                 <h2>Kontak</h2>
-                <p>Email: adzkiamadanipku@gmail.com</p>
+                <p class="contact-info">Email: <a href="mailto:adzkiamadanipku@gmail.com">adzkiamadanipku@gmail.com</a></p>
             </section>
         </main>
     </div>
     <footer>
-        <p>&copy; 2025 Muhammad Adzkia Madani</p>
+        &copy; 2025 Muhammad Adzkia Madani
     </footer>
 </body>
 </html>
